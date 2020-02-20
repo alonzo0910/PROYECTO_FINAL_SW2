@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card">
+        <div class="car-header">
+            <h1>SmartHome</h1>
+        </div>
+        <div class="card-body">
+            {{#if error}}
+             <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+            {{/if}}
+            <form action="/validated" method="POST">
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Usuario" class="form-control" autofocus>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Contraseña" class="form-control">
+                </div>
+                <button class="btn btn-primary btn-block">Iniciar Sesión</button>
+            </form>
+            <p>¿No tiene una cuenta? <a href="/signUp">Regístrese aquí</a></p>
+            <p><a href="/changepass">Cambiar contraseña</a></p>
+        </div>
+    </div>
+</div>

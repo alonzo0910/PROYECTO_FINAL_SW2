@@ -1,0 +1,14 @@
+body{
+    background: turquoise;  
+}
+h1,p{
+    color: black;
+    text-align: center;
+    text-justify: auto;
+    font: bold;
+}
+a{
+    font: bold;
+    text-align: center;
+    
+}

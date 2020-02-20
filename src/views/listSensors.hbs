@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-6">
+        <a href="/addSensor/{{idRoom}}" class="btn btn-secondary">Agregar Sensor</a>
+    </div>
+    <div class="col-md-6 pull-right">    
+        <a href="/logOut" class="btn btn-secondary ">Cerrar Sesión</a>       
+    </div>
+    
+</div>
+
+<br>
+<br>
+<br>
+<div class="container p-4">
+    <div class="row">
+        {{#if listsensors}}
+        {{#each listsensors}}
+            <div class="col-md-3">
+                <div class="card tetx-center">
+                    <div class="card-body">
+                        <a href="">
+                            <h3 class="card-title text-uppercase">
+                                {{nameSensor}}
+                            </h3>
+                        </a>
+                        <p class="m-2">{{unit}}</p>
+                        <a href="/deleteSensor/{{nameSensor}}" class="btn btn-danger">Quitar</a>
+                        <a href="/editUnit/{{nameSensor}}" class="btn btn-secondary">Cambiar Unidad</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            {{/each}}
+            {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                        <p>Aún no se ha agregado sensores.</p>
+                        <a href="/addSensor/{{idRoom}}">Agregue una!</a>
+                    </div>
+                </div>
+        {{/if}}
+    </div>
+</div>
+
+
+
+<!--############################################################################## -->

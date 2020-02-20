@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-6">
+        <a href="/addRoom/{{idHouse}}" class="btn btn-secondary">Agregar Habitación</a>
+    </div>
+    <div class="col-md-6 pull-right">    
+        <a href="/logOut" class="btn btn-secondary ">Cerrar Sesión</a>       
+    </div>
+    
+</div>
+
+<br>
+<br>
+<br>
+<div class="container p-4">
+    <div class="row">
+        {{#if listrooms}}
+        {{#each listrooms}}
+            <div class="col-md-3">
+                <div class="card tetx-center">
+                    <div class="card-body">
+                        <a href="/listSensors/{{nameRoom}}">
+                            <h3 class="card-title text-uppercase">
+                                {{nameRoom}}
+                            </h3>
+                        </a>
+                        <a href="/deleteRoom/{{nameRoom}}" class="btn btn-danger">Borrar</a>
+                        <!--<a href="/edit/{{nameHouse}}/{{direction}}" class="btn btn-secondary">Editar</a>-->
+                        <a href="/editRoom/{{nameRoom}}" class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            {{/each}}
+            {{else}}
+                <div class="col-md-4 mx-auto">
+                    <div class="card card-body text-center">
+                        <p>Aún no se ha creado habitaciones.</p>
+                        <a href="/addRoom/{{idHouse}}">Agregue una!</a>
+                    </div>
+                </div>
+        {{/if}}
+    </div>
+</div>
+
+
+
+<!--############################################################################## -->
